@@ -4,9 +4,188 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Realtor_UI"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Realtor" WindowState="Maximized">
+
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+
+        <!--#region Labels-->
+        <Label Background="Firebrick" Grid.Column="0" Grid.ColumnSpan="15" Grid.Row="0" Grid.RowSpan="2"/>
+        <Label Background="Transparent" BorderBrush="LightCoral" BorderThickness="2"
+               Grid.Column="0" Grid.ColumnSpan="15" Grid.Row="2" Grid.RowSpan="2"/>
+        <Label x:Name="MyListings_Label" Content="My Listings" Foreground="Black" FontSize="50"
+               Background="Transparent" BorderThickness="0" Visibility="Hidden"
+               Grid.Column="5" Grid.ColumnSpan="4"  Grid.Row="4" Grid.RowSpan="2"/>
+        <Label x:Name="MyReservations_Label" Content="My Reservations" Foreground="Black" FontSize="50"
+               Background="Transparent" BorderThickness="0" Visibility="Hidden"
+               Grid.Column="5" Grid.ColumnSpan="4"  Grid.Row="4" Grid.RowSpan="2"/>
+        <!--#endregion-->
+
+        <!--#region Butons-->
+        <Button x:Name="ForSale_Button" Content="FOR SALE"
+                Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="2" Margin="10"
+                Foreground="White" FontSize="15" Click="ForSale_Button_Click"/>
+        <Button x:Name="ForRent_Button" Content="FOR RENT"
+                Grid.Column="3" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="2" Margin="10"
+                Foreground="White" FontSize="15" Click="ForRent_Button_Click"/>
+        <Button x:Name="Reserved_Button" Content="RESERVED"
+                Grid.Column="6" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="2" Margin="10"
+                Foreground="White" FontSize="15" Click="Reserved_Button_Click"/>
+        <Button x:Name="Sold_Button" Content="SOLD"
+                Grid.Column="9" Grid.ColumnSpan="3" Grid.Row="0" Grid.RowSpan="2" Margin="10"
+                Foreground="White" FontSize="15" Click="Sold_Button_Click"/>
+        <Button x:Name="SignIn_Button" Content="SIGN IN"
+                Grid.Column="12" Grid.ColumnSpan="2" Grid.Row="0" Margin="10"
+                Foreground="White" FontSize="15" Background="Transparent" BorderBrush="Transparent"
+                Click="SignIn_Button_Click"/>
+        <Button x:Name="SignUp_Button" Content="SIGN UP"
+                Grid.Column="12" Grid.ColumnSpan="2" Grid.Row="1" Margin="10"
+                Foreground="White" FontSize="15" Background="Transparent" BorderBrush="Transparent"
+                Click="SignUp_Button_Click"/>
+        <Button x:Name="Search_Button" Content="Search" Margin="50,0,50,0"
+                Grid.Column="12" Grid.ColumnSpan="2" Grid.Row="2" Grid.RowSpan="2"/>
+        <Button x:Name="Account_Button" Margin="50,0,50,0"
+                Grid.Column="12" Grid.ColumnSpan="2" Grid.Row="0" Grid.RowSpan="2" Visibility="Hidden"
+                Click="Account_Button_Click">
+            <materialDesign:PackIcon x:Name="Account_Icon" Kind="Account" 
+                   Visibility="Hidden" Width="25" Height="25" Foreground="White"/>
+        </Button>
+
+        <!--#endregion-->
+
+        <!--#region TextBoxes-->
+        <TextBox x:Name="Country_TextBox" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="2"
+                 Foreground="Red" FontSize="15" Margin="0,0,5,0"
+                 materialDesign:HintAssist.Hint="Country"
+                materialDesign:HintAssist.FloatingScale="0.9"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <TextBox x:Name="City_TextBox" Grid.Column="2" Grid.ColumnSpan="2" Grid.Row="3"
+                 Foreground="Red" FontSize="15" Margin="0,0,5,5"
+                 materialDesign:HintAssist.Hint="City"
+                materialDesign:HintAssist.FloatingScale="0.9"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <TextBox x:Name="PriceFrom_TextBox" Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="2"
+                 Foreground="Red" FontSize="15" Margin="0,0,5,0"
+                 materialDesign:HintAssist.Hint="Price from"
+                materialDesign:HintAssist.FloatingScale="0.9"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <TextBox x:Name="PriceTo_TextBox" Grid.Column="4" Grid.ColumnSpan="2" Grid.Row="3"
+                 Foreground="Red" FontSize="15" Margin="0,0,5,5"
+                 materialDesign:HintAssist.Hint="Price to"
+                materialDesign:HintAssist.FloatingScale="0.9"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <TextBox x:Name="RoomsFrom_TextBox" Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="2"
+                 Foreground="Red" FontSize="15" Margin="0,0,5,0"
+                 materialDesign:HintAssist.Hint="Rooms from"
+                materialDesign:HintAssist.FloatingScale="0.9"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <TextBox x:Name="RoomsTo_TextBox" Grid.Column="6" Grid.ColumnSpan="2" Grid.Row="3"
+                 Foreground="Red" FontSize="15" Margin="0,0,5,5"
+                 materialDesign:HintAssist.Hint="Rooms to"
+                materialDesign:HintAssist.FloatingScale="0.9"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <TextBox x:Name="SqrFtFrom_TextBox" Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="2"
+                 Foreground="Red" FontSize="15" Margin="0,0,5,0"
+                 materialDesign:HintAssist.Hint="Sqr. ft. from"
+                materialDesign:HintAssist.FloatingScale="0.9"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <TextBox x:Name="SqrFtTo_TextBox" Grid.Column="8" Grid.ColumnSpan="2" Grid.Row="3"
+                 Foreground="Red" FontSize="15" Margin="0,0,5,5"
+                 materialDesign:HintAssist.Hint="Sqr. ft. to"
+                materialDesign:HintAssist.FloatingScale="0.9"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <TextBox x:Name="FloorFrom_TextBox" Grid.Column="10" Grid.ColumnSpan="2" Grid.Row="2"
+                 Foreground="Red" FontSize="15" Margin="0,0,5,0"
+                 materialDesign:HintAssist.Hint="Floor from"
+                materialDesign:HintAssist.FloatingScale="0.9"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <TextBox x:Name="FloorTo_TextBox" Grid.Column="10" Grid.ColumnSpan="2" Grid.Row="3"
+                 Foreground="Red" FontSize="15" Margin="0,0,5,5"
+                 materialDesign:HintAssist.Hint="Floor to"
+                materialDesign:HintAssist.FloatingScale="0.9"
+                Style="{StaticResource MaterialDesignFloatingHintTextBox}"/>
+        <!--#endregion-->
+
+        <!--#region RadioButtons-->
+        <RadioButton x:Name="House_RadioButton" Content="House" 
+                     Foreground="Red" FontSize="15" Margin="0,15,49,0"
+                     VerticalAlignment="Center" HorizontalAlignment="Right"
+                     Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2"/>
+        <RadioButton x:Name="Apartment_RadioButton" Content="Apartment" 
+                     Foreground="Red" FontSize="15" Margin="49,15,5,0"
+                     VerticalAlignment="Center" 
+                     Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="3"/>
+        <RadioButton x:Name="All_RadioButton" Content="All" 
+                     Foreground="Red" FontSize="15" Margin="15,15,5,0"
+                     VerticalAlignment="Center" HorizontalAlignment="Left"
+                     Grid.Column="0" Grid.ColumnSpan="2" Grid.Row="2"/>
+        <!--#endregion-->
+
+        <!--#region ListBoxes-->
+        <ListBox x:Name="AccountMenu_ListBox" Background="White" BorderBrush="Black" BorderThickness="1"
+                 Grid.Row="1" Grid.RowSpan="4" Grid.Column="12" Grid.ColumnSpan="2"
+                 ScrollViewer.VerticalScrollBarVisibility="Disabled" Margin="0,20,25,25"
+                 ScrollViewer.CanContentScroll="False" Visibility="Hidden"
+                 >
+            <Button x:Name="MyListings_Button" Content="My Listings"
+                        Width="150" BorderThickness="0" Background="Transparent" Foreground="Black"
+                     Click="MyListings_Button_Click"/>
+            <Button x:Name="MyReservations_Button" Content="My Reservations" 
+                        Width="150" BorderThickness="0" Background="Transparent" Foreground="Black"
+                    Click="MyReservations_Button_Click"/>
+            <Button x:Name="Exit_Button" Content="Exit"
+                        Width="150" BorderThickness="0" Background="Transparent" Foreground="Black"
+                    Click="Exit_Button_Click"/>
+        </ListBox>
+        <!--#endregion-->
+
+        <DataGrid x:Name="Lots_DataGrid" Grid.Column="1" Grid.ColumnSpan="12" Grid.Row="4" Grid.RowSpan="11"
+                  Foreground="Black">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Street" Binding="{Binding Street}" ></DataGridTextColumn>
+                <DataGridTextColumn Header="City" Binding="{Binding City}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Country" Binding="{Binding Country}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Price" Binding="{Binding Price}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Floor" Binding="{Binding Floor}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Rooms" Binding="{Binding Rooms}"></DataGridTextColumn>
+                <DataGridTextColumn Header="SQR" Binding="{Binding SQR}"></DataGridTextColumn>
+                <DataGridTextColumn Header="Decriptions" Binding="{Binding Decriptions}"></DataGridTextColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+
     </Grid>
 </Window>
