@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:55421/Methods.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:55421/Methods.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:55421/Methods.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WCF.DataContracts" />
+      <xsd:import schemaLocation="http://localhost:55421/Methods.svc?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://localhost:55421/Methods.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/WCF.Models" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IMethods_AddUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddUser" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_AddUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_ModifyUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUser" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_ModifyUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ModifyUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_GetUsers_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsers" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_GetUsers_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetUsersResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_GetLots_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLots" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_GetLots_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLotsResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_ReserveLot_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReserveLot" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_ReserveLot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReserveLotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_AddLot_InputMessage">
+    <wsdl:part name="parameters" element="tns:AddLot" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_AddLot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:AddLotResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_LotEdit_InputMessage">
+    <wsdl:part name="parameters" element="tns:LotEdit" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_LotEdit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:LotEditResponse" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_DeleteLot_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLot" />
+  </wsdl:message>
+  <wsdl:message name="IMethods_DeleteLot_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteLotResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IMethods">
+    <wsdl:operation name="AddUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/AddUser" message="tns:IMethods_AddUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/AddUserResponse" message="tns:IMethods_AddUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/ModifyUser" message="tns:IMethods_ModifyUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/ModifyUserResponse" message="tns:IMethods_ModifyUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/DeleteUser" message="tns:IMethods_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/DeleteUserResponse" message="tns:IMethods_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/GetUsers" message="tns:IMethods_GetUsers_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/GetUsersResponse" message="tns:IMethods_GetUsers_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLots">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/GetLots" message="tns:IMethods_GetLots_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/GetLotsResponse" message="tns:IMethods_GetLots_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReserveLot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/ReserveLot" message="tns:IMethods_ReserveLot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/ReserveLotResponse" message="tns:IMethods_ReserveLot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="AddLot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/AddLot" message="tns:IMethods_AddLot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/AddLotResponse" message="tns:IMethods_AddLot_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="LotEdit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/LotEdit" message="tns:IMethods_LotEdit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/LotEditResponse" message="tns:IMethods_LotEdit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLot">
+      <wsdl:input wsaw:Action="http://tempuri.org/IMethods/DeleteLot" message="tns:IMethods_DeleteLot_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IMethods/DeleteLotResponse" message="tns:IMethods_DeleteLot_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IMethods" type="tns:IMethods">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddUser">
+      <soap:operation soapAction="http://tempuri.org/IMethods/AddUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ModifyUser">
+      <soap:operation soapAction="http://tempuri.org/IMethods/ModifyUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IMethods/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetUsers">
+      <soap:operation soapAction="http://tempuri.org/IMethods/GetUsers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLots">
+      <soap:operation soapAction="http://tempuri.org/IMethods/GetLots" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReserveLot">
+      <soap:operation soapAction="http://tempuri.org/IMethods/ReserveLot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddLot">
+      <soap:operation soapAction="http://tempuri.org/IMethods/AddLot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="LotEdit">
+      <soap:operation soapAction="http://tempuri.org/IMethods/LotEdit" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteLot">
+      <soap:operation soapAction="http://tempuri.org/IMethods/DeleteLot" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IMethods" binding="tns:BasicHttpBinding_IMethods">
+      <soap:address location="http://localhost:55421/Methods.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
