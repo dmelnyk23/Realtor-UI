@@ -49,10 +49,22 @@
                Grid.Column="0" Grid.ColumnSpan="15" Grid.Row="2" Grid.RowSpan="2"/>
         <Label x:Name="MyListings_Label" Content="My Listings" Foreground="Black" FontSize="50"
                Background="Transparent" BorderThickness="0" Visibility="Hidden"
-               Grid.Column="5" Grid.ColumnSpan="4"  Grid.Row="4" Grid.RowSpan="2"/>
+               Grid.Column="5" Grid.ColumnSpan="4"  Grid.Row="4"  Grid.RowSpan="2"/>
         <Label x:Name="MyReservations_Label" Content="My Reservations" Foreground="Black" FontSize="50"
                Background="Transparent" BorderThickness="0" Visibility="Hidden"
-               Grid.Column="5" Grid.ColumnSpan="4"  Grid.Row="4" Grid.RowSpan="2"/>
+               Grid.Column="5" Grid.ColumnSpan="4"  Grid.Row="4"  Grid.RowSpan="2"/>
+        <Label x:Name="ForSale_Label" Content="FOR SALE" Foreground="Black" FontSize="50"
+               Background="Transparent" BorderThickness="0" Visibility="Hidden"
+               Grid.Column="5" Grid.ColumnSpan="4"  Grid.Row="4"  Grid.RowSpan="2"/>
+        <Label x:Name="ForRent_Label" Content="My Reservations" Foreground="Black" FontSize="50"
+               Background="Transparent" BorderThickness="0" Visibility="Hidden"
+               Grid.Column="5" Grid.ColumnSpan="4"  Grid.Row="4"  Grid.RowSpan="2"/>
+        <Label x:Name="Reserved_Label" Content="Reserved" Foreground="Black" FontSize="50"
+               Background="Transparent" BorderThickness="0" Visibility="Hidden"
+               Grid.Column="5" Grid.ColumnSpan="4"  Grid.Row="4"  Grid.RowSpan="2"/>
+        <Label x:Name="Sold_Label" Content="Sold" Foreground="Black" FontSize="50"
+               Background="Transparent" BorderThickness="0" Visibility="Hidden"
+               Grid.Column="5" Grid.ColumnSpan="4"  Grid.Row="4"  Grid.RowSpan="2"/>
         <!--#endregion-->
 
         <!--#region Butons-->
@@ -173,7 +185,7 @@
         </ListBox>
         <!--#endregion-->
 
-        <DataGrid x:Name="Lots_DataGrid" Grid.Column="1" Grid.ColumnSpan="12" Grid.Row="4" Grid.RowSpan="11"
+        <DataGrid x:Name="Lots_DataGrid" Grid.Column="1" Grid.ColumnSpan="12" Grid.Row="6" Grid.RowSpan="10"
                   Foreground="Black">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Street" Binding="{Binding Street}" ></DataGridTextColumn>
