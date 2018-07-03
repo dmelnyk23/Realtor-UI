@@ -127,56 +127,84 @@ namespace Realtor_UI
                     ForRent_Button.Background = colorButtons;
                     Reserved_Button.Background = colorButtons;
                     Sold_Button.Background = colorButtons;
+                    ForSale_Label.Visibility = Visibility.Visible;
                     MyListings_Label.Visibility = Visibility.Hidden;
                     MyReservations_Label.Visibility = Visibility.Hidden;
+                    ForRent_Label.Visibility = Visibility.Hidden;
+                    Sold_Label.Visibility = Visibility.Hidden;
+                    Reserved_Label.Visibility = Visibility.Hidden;
                     break;
                 case "FOR RENT":
                     ForSale_Button.Background = colorButtons;
                     ForRent_Button.Background = Brushes.Transparent;
                     Reserved_Button.Background = colorButtons;
                     Sold_Button.Background = colorButtons;
+                    ForSale_Label.Visibility = Visibility.Hidden;
                     MyListings_Label.Visibility = Visibility.Hidden;
                     MyReservations_Label.Visibility = Visibility.Hidden;
+                    ForRent_Label.Visibility = Visibility.Visible;
+                    Sold_Label.Visibility = Visibility.Hidden;
+                    Reserved_Label.Visibility = Visibility.Hidden;
                     break;
                 case "RESERVED":
                     ForSale_Button.Background = colorButtons;
                     ForRent_Button.Background = colorButtons;
                     Reserved_Button.Background = Brushes.Transparent;
                     Sold_Button.Background = colorButtons;
+                    ForSale_Label.Visibility = Visibility.Hidden;
                     MyListings_Label.Visibility = Visibility.Hidden;
                     MyReservations_Label.Visibility = Visibility.Hidden;
+                    ForRent_Label.Visibility = Visibility.Hidden;
+                    Sold_Label.Visibility = Visibility.Hidden;
+                    Reserved_Label.Visibility = Visibility.Visible;
                     break;
                 case "SOLD":
                     ForSale_Button.Background = colorButtons;
                     ForRent_Button.Background = colorButtons;
                     Reserved_Button.Background = colorButtons;
                     Sold_Button.Background = Brushes.Transparent;
+                    ForSale_Label.Visibility = Visibility.Hidden;
                     MyListings_Label.Visibility = Visibility.Hidden;
                     MyReservations_Label.Visibility = Visibility.Hidden;
+                    ForRent_Label.Visibility = Visibility.Hidden;
+                    Sold_Label.Visibility = Visibility.Visible;
+                    Reserved_Label.Visibility = Visibility.Hidden;
                     break;
                 case "My Listings":
                     ForSale_Button.Background = colorButtons;
                     ForRent_Button.Background = colorButtons;
                     Reserved_Button.Background = colorButtons;
                     Sold_Button.Background = colorButtons;
-                    MyReservations_Label.Visibility = Visibility.Hidden;
+                    ForSale_Label.Visibility = Visibility.Hidden;
                     MyListings_Label.Visibility = Visibility.Visible;
+                    MyReservations_Label.Visibility = Visibility.Hidden;
+                    ForRent_Label.Visibility = Visibility.Hidden;
+                    Sold_Label.Visibility = Visibility.Hidden;
+                    Reserved_Label.Visibility = Visibility.Hidden;
                     break;
                 case "My Reservations":
                     ForSale_Button.Background = colorButtons;
                     ForRent_Button.Background = colorButtons;
                     Reserved_Button.Background = colorButtons;
                     Sold_Button.Background = colorButtons;
+                    ForSale_Label.Visibility = Visibility.Hidden;
                     MyListings_Label.Visibility = Visibility.Hidden;
                     MyReservations_Label.Visibility = Visibility.Visible;
+                    ForRent_Label.Visibility = Visibility.Hidden;
+                    Sold_Label.Visibility = Visibility.Hidden;
+                    Reserved_Label.Visibility = Visibility.Hidden;
                     break;
                 case "Exit":
                     ForSale_Button.Background = colorButtons;
                     ForRent_Button.Background = colorButtons;
                     Reserved_Button.Background = colorButtons;
                     Sold_Button.Background = colorButtons;
+                    ForSale_Label.Visibility = Visibility.Hidden;
                     MyListings_Label.Visibility = Visibility.Hidden;
                     MyReservations_Label.Visibility = Visibility.Hidden;
+                    ForRent_Label.Visibility = Visibility.Hidden;
+                    Sold_Label.Visibility = Visibility.Hidden;
+                    Reserved_Label.Visibility = Visibility.Hidden;
                     break;
             }
         }
