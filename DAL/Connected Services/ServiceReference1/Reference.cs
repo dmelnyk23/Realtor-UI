@@ -423,6 +423,9 @@ namespace DAL.ServiceReference1 {
         private string CountryField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private int IDField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private DAL.ServiceReference1.Lot[] LotsField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -460,6 +463,19 @@ namespace DAL.ServiceReference1 {
                 if ((object.ReferenceEquals(this.CountryField, value) != true)) {
                     this.CountryField = value;
                     this.RaisePropertyChanged("Country");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public int ID {
+            get {
+                return this.IDField;
+            }
+            set {
+                if ((this.IDField.Equals(value) != true)) {
+                    this.IDField = value;
+                    this.RaisePropertyChanged("ID");
                 }
             }
         }

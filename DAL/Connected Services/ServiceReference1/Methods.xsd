@@ -5,6 +5,7 @@
     <xs:sequence>
       <xs:element minOccurs="0" name="City" nillable="true" type="xs:string" />
       <xs:element minOccurs="0" name="Country" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ID" type="xs:int" />
       <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WCF.DataContracts" minOccurs="0" name="Lots" nillable="true" type="q1:ArrayOfLot" />
       <xs:element minOccurs="0" name="Street" nillable="true" type="xs:string" />
     </xs:sequence>
