@@ -87,6 +87,7 @@ namespace DAL
                 {
                     ID = item.ID,
                     Apartment = item.Apartment,
+                    IsForSale=item.IsForSale,
                     Description = item.Description,
                     Flour = item.Flour,
                     House = item.House,
@@ -160,6 +161,7 @@ namespace DAL
                 Address = ConvertToAddressWCF(lotUI.Address),
                 Photos = ConvertToPhotoWCF(lotUI.Photos).ToArray(),
                 Apartment = lotUI.Apartment,
+                IsForSale = lotUI.IsForSale,
                 Description = lotUI.Description,
                 Flour = lotUI.Flour,
                 House = lotUI.House,
@@ -179,6 +181,7 @@ namespace DAL
             {
                 Address = ConvertToAddressWCF(lotUI.Address),
                 Photos = ConvertToPhotoWCF(lotUI.Photos).ToArray(),
+                IsForSale = lotUI.IsForSale,
                 Apartment = lotUI.Apartment,
                 Description = lotUI.Description,
                 Flour = lotUI.Flour,
@@ -206,6 +209,7 @@ namespace DAL
                 Apartment = lotUI.Apartment,
                 Description = lotUI.Description,
                 Flour = lotUI.Flour,
+                IsForSale = lotUI.IsForSale,
                 House = lotUI.House,
                 IsReserved = lotUI.IsReserved,
                 IsSold = lotUI.IsSold,

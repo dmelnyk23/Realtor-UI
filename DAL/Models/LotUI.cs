@@ -9,6 +9,7 @@ namespace DALUI.Models
     public class LotUI
     {
         public int ID { get; set; }
+        public bool IsForSale { get; set; }
         public decimal Price { get; set; }
         public string Description { get; set; }
         public double Square { get; set; }

@@ -29,6 +29,7 @@
       <xs:element minOccurs="0" name="Flour" type="xs:int" />
       <xs:element minOccurs="0" name="House" type="xs:boolean" />
       <xs:element minOccurs="0" name="ID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsForSale" type="xs:boolean" />
       <xs:element minOccurs="0" name="IsReserved" type="xs:boolean" />
       <xs:element minOccurs="0" name="IsSold" type="xs:boolean" />
       <xs:element minOccurs="0" name="Photos" nillable="true" type="tns:ArrayOfPhoto" />

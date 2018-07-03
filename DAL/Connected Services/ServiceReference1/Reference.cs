@@ -198,6 +198,9 @@ namespace DAL.ServiceReference1 {
         private int IDField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
+        private bool IsForSaleField;
+        
+        [System.Runtime.Serialization.OptionalFieldAttribute()]
         private bool IsReservedField;
         
         [System.Runtime.Serialization.OptionalFieldAttribute()]
@@ -302,6 +305,19 @@ namespace DAL.ServiceReference1 {
                 if ((this.IDField.Equals(value) != true)) {
                     this.IDField = value;
                     this.RaisePropertyChanged("ID");
+                }
+            }
+        }
+        
+        [System.Runtime.Serialization.DataMemberAttribute()]
+        public bool IsForSale {
+            get {
+                return this.IsForSaleField;
+            }
+            set {
+                if ((this.IsForSaleField.Equals(value) != true)) {
+                    this.IsForSaleField = value;
+                    this.RaisePropertyChanged("IsForSale");
                 }
             }
         }
